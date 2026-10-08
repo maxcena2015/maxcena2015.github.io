@@ -97,6 +97,51 @@
             text-decoration: none
         }
 
+        header .wrap {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 28px;
+        }
+
+        header .image-wrapper {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 3px solid rgba(255, 255, 255, .25);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, .25);
+        }
+
+        header .image-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        @media (max-width: 600px) {
+            header .wrap {
+                flex-direction: column-reverse;
+                align-items: flex-start;
+                gap: 20px;
+            }
+
+            header .image-wrapper {
+                width: 110px;
+                height: 110px
+            }
+        }
+
+        header .col:first-child {
+            flex: 1 1 auto;
+            min-width: 0
+        }
+
+        header .col:last-child {
+            flex: 0 0 auto
+        }
+
         section {
             padding: 44px 0
         }
@@ -246,15 +291,28 @@
 
 <header>
     <div class="wrap">
-        <h1>Maksim Levchenko</h1>
-        <p class="role">Senior Backend Developer (PHP / Laravel)</p>
-        <div class="meta">Ukraine · Remote · <a href="mailto:maxcena2015@gmail.com"
-                                                style="color:#fff;text-decoration:underline">maxcena2015@gmail.com</a>
+        <div class="col">
+            <h1>Maksim Levchenko</h1>
+            <p class="role">Senior Backend Developer (PHP / Laravel)</p>
+            <div class="meta">Ukraine · Remote · <a href="mailto:maxcena2015@gmail.com"
+                                                    style="color:#fff;text-decoration:underline">maxcena2015@gmail.com</a>
+            </div>
+            <div class="links">
+                <a href="https://www.linkedin.com/in/maxym-levchenko" target="_blank" rel="noopener"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" style="vertical-align:-2px;">
+                    <path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.07 2.07 0 1 1 0-4.14 2.07 2.07 0 0 1 0 4.14zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/>
+                </svg></a>
+                <a href="https://www.upwork.com/freelancers/~01a93d583f2bf5cb34" target="_blank" rel="noopener"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" style="vertical-align:-2px;">
+                    <path d="M18.561 13.158c-1.102 0-2.135-.467-3.074-1.227l.228-1.076.008-.042c.207-1.143.849-3.06 2.839-3.06 1.492 0 2.703 1.212 2.703 2.703-.001 1.489-1.212 2.702-2.704 2.702zm0-8.14c-2.539 0-4.51 1.649-5.31 4.366-1.22-1.834-2.148-4.036-2.687-5.892H7.828v7.112c-.002 1.406-1.141 2.546-2.547 2.548-1.405-.002-2.543-1.143-2.545-2.548V3.492H0v7.112c0 2.914 2.37 5.303 5.281 5.303 2.913 0 5.283-2.389 5.283-5.303v-1.19c.529 1.107 1.182 2.229 1.974 3.221l-1.673 7.873h2.797l1.213-5.71c1.063.679 2.285 1.109 3.686 1.109 3 0 5.439-2.452 5.439-5.45 0-3-2.439-5.439-5.439-5.439z"/>
+                </svg></a>
+                <a href="mailto:maxcena2015@gmail.com"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" style="vertical-align:-2px">
+                    <path d="M22 4H2a1 1 0 0 0-1 1v14a1 1 0 0 0 1 1h20a1 1 0 0 0 1-1V5a1 1 0 0 0-1-1zm-1.4 2L12 11.72 3.4 6h17.2zM3 18V7.24l8.47 5.64a1 1 0 0 0 1.06 0L21 7.24V18H3z"/>
+                </svg></a>
+            </div>
         </div>
-        <div class="links">
-            <a href="https://www.linkedin.com/in/maxym-levchenko" target="_blank" rel="noopener">LinkedIn</a>
-            <a href="https://www.upwork.com/freelancers/~01a93d583f2bf5cb34" target="_blank" rel="noopener">Upwork</a>
-            <a href="mailto:maxcena2015@gmail.com">Email</a>
+        <div class="col">
+            <div class="image-wrapper">
+                <img src="assets/img/face.JPG" alt="Maksim Levchenko" />
+            </div>
         </div>
     </div>
 </header>
@@ -425,14 +483,18 @@
     <div class="wrap">
         <h2>Resume</h2>
         <p class="lead" style="margin-bottom:18px">Full CV with work history and education.</p>
-        <a href="Maksim_Levchenko_CV.pdf" target="_blank" rel="noopener">Download CV (PDF)</a>
+        <a href="assets/docs/Maksim_Levchenko_CV.pdf" target="_blank" rel="noopener">Download CV (PDF)</a>
     </div>
 </section>
 
 <footer>
     <div class="wrap">
-        <a href="https://www.linkedin.com/in/maxym-levchenko" target="_blank" rel="noopener">LinkedIn</a>
-        <a href="https://www.upwork.com/freelancers/~01a93d583f2bf5cb34" target="_blank" rel="noopener">Upwork</a>
+        <a href="https://www.linkedin.com/in/maxym-levchenko" target="_blank" rel="noopener"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" style="vertical-align:-2px;">
+            <path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.07 2.07 0 1 1 0-4.14 2.07 2.07 0 0 1 0 4.14zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/>
+        </svg></a>
+        <a href="https://www.upwork.com/freelancers/~01a93d583f2bf5cb34" target="_blank" rel="noopener"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" style="vertical-align:-2px;">
+            <path d="M18.561 13.158c-1.102 0-2.135-.467-3.074-1.227l.228-1.076.008-.042c.207-1.143.849-3.06 2.839-3.06 1.492 0 2.703 1.212 2.703 2.703-.001 1.489-1.212 2.702-2.704 2.702zm0-8.14c-2.539 0-4.51 1.649-5.31 4.366-1.22-1.834-2.148-4.036-2.687-5.892H7.828v7.112c-.002 1.406-1.141 2.546-2.547 2.548-1.405-.002-2.543-1.143-2.545-2.548V3.492H0v7.112c0 2.914 2.37 5.303 5.281 5.303 2.913 0 5.283-2.389 5.283-5.303v-1.19c.529 1.107 1.182 2.229 1.974 3.221l-1.673 7.873h2.797l1.213-5.71c1.063.679 2.285 1.109 3.686 1.109 3 0 5.439-2.452 5.439-5.45 0-3-2.439-5.439-5.439-5.439z"/>
+        </svg></a>
         <a href="mailto:maxcena2015@gmail.com">maxcena2015@gmail.com</a>
         <div style="margin-top:10px">© Maksim Levchenko</div>
     </div>
