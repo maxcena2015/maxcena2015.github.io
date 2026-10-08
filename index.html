@@ -1,285 +1,441 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Maksim Levchenko — Senior Backend Developer</title>
-<meta name="description" content="Maksim Levchenko — Senior Backend Developer (PHP / Laravel). ~6 years of commercial experience. Selected projects and work.">
-<style>
-  :root{
-    --bg:#f6f7f9;
-    --surface:#ffffff;
-    --ink:#1b2430;
-    --muted:#5b6673;
-    --accent:#1B3550;
-    --line:#e5e8ec;
-    --radius:14px;
-    --maxw:960px;
-  }
-  *{box-sizing:border-box}
-  html{scroll-behavior:smooth}
-  body{
-    margin:0;
-    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
-    color:var(--ink);
-    background:var(--bg);
-    line-height:1.6;
-    -webkit-font-smoothing:antialiased;
-  }
-  a{color:var(--accent);text-decoration:none}
-  a:hover{text-decoration:underline}
-  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 20px}
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Maksim Levchenko - Senior Backend Developer</title>
+    <meta name="description"
+          content="Maksim Levchenko - Senior Backend Developer (PHP / Laravel). ~6 years of commercial experience. Selected projects and work.">
+    <style>
+        :root {
+            --bg: #f6f7f9;
+            --surface: #ffffff;
+            --ink: #1b2430;
+            --muted: #5b6673;
+            --accent: #1B3550;
+            --line: #e5e8ec;
+            --radius: 14px;
+            --maxw: 960px;
+        }
 
-  /* Header */
-  header{
-    background:var(--accent);
-    color:#fff;
-    padding:56px 0 48px;
-  }
-  header h1{margin:0 0 6px;font-size:2rem;letter-spacing:.2px}
-  header .role{margin:0;font-size:1.1rem;opacity:.9;font-weight:500}
-  header .meta{margin-top:18px;font-size:.95rem;opacity:.9}
-  header .links{margin-top:20px;display:flex;flex-wrap:wrap;gap:10px}
-  header .links a{
-    display:inline-block;
-    background:rgba(255,255,255,.12);
-    color:#fff;
-    padding:8px 14px;
-    border-radius:999px;
-    font-size:.9rem;
-    border:1px solid rgba(255,255,255,.18);
-  }
-  header .links a:hover{background:rgba(255,255,255,.22);text-decoration:none}
+        * {
+            box-sizing: border-box
+        }
 
-  /* Sections */
-  section{padding:44px 0}
-  section + section{border-top:1px solid var(--line)}
-  h2{font-size:1.4rem;margin:0 0 18px;color:var(--ink)}
-  .lead{font-size:1.05rem;color:var(--muted);max-width:720px}
+        html {
+            scroll-behavior: smooth
+        }
 
-  /* Projects */
-  .project{
-    background:var(--surface);
-    border:1px solid var(--line);
-    border-radius:var(--radius);
-    padding:24px;
-    margin-bottom:24px;
-  }
-  .project h3{margin:0 0 4px;font-size:1.25rem}
-  .project .sub{margin:0 0 14px;color:var(--muted);font-size:.95rem}
-  .project p.desc{margin:0 0 18px}
-  .tags{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 18px}
-  .tag{
-    background:#eef1f4;
-    color:var(--accent);
-    font-size:.8rem;
-    padding:4px 10px;
-    border-radius:999px;
-    font-weight:600;
-  }
-  .shots{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px}
-  .shots a{display:block;border:1px solid var(--line);border-radius:10px;overflow:hidden;background:#fff}
-  .shots img{display:block;width:100%;height:auto}
+        body {
+            margin: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            color: var(--ink);
+            background: var(--bg);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
 
-  /* Skills */
-  .skills{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}
-  .skillcard{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:18px 20px}
-  .skillcard h4{margin:0 0 8px;font-size:1rem;color:var(--accent)}
-  .skillcard p{margin:0;color:var(--muted);font-size:.95rem}
+        a {
+            color: var(--accent);
+            text-decoration: none
+        }
 
-  /* CTA */
-  .cta a{
-    display:inline-block;background:var(--accent);color:#fff;
-    padding:12px 22px;border-radius:999px;font-weight:600;
-  }
-  .cta a:hover{text-decoration:none;opacity:.92}
+        a:hover {
+            text-decoration: underline
+        }
 
-  footer{padding:36px 0;border-top:1px solid var(--line);color:var(--muted);font-size:.9rem}
-  footer a{margin-right:16px}
+        .wrap {
+            max-width: var(--maxw);
+            margin: 0 auto;
+            padding: 0 20px
+        }
 
-  @media (max-width:600px){
-    header{padding:40px 0 34px}
-    header h1{font-size:1.6rem}
-    section{padding:34px 0}
-  }
-</style>
+        header {
+            background: var(--accent);
+            color: #fff;
+            padding: 56px 0 48px;
+        }
+
+        header h1 {
+            margin: 0 0 6px;
+            font-size: 2rem;
+            letter-spacing: .2px
+        }
+
+        header .role {
+            margin: 0;
+            font-size: 1.1rem;
+            opacity: .9;
+            font-weight: 500
+        }
+
+        header .meta {
+            margin-top: 18px;
+            font-size: .95rem;
+            opacity: .9
+        }
+
+        header .links {
+            margin-top: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px
+        }
+
+        header .links a {
+            display: inline-block;
+            background: rgba(255, 255, 255, .12);
+            color: #fff;
+            padding: 8px 14px;
+            border-radius: 999px;
+            font-size: .9rem;
+            border: 1px solid rgba(255, 255, 255, .18);
+        }
+
+        header .links a:hover {
+            background: rgba(255, 255, 255, .22);
+            text-decoration: none
+        }
+
+        section {
+            padding: 44px 0
+        }
+
+        section + section {
+            border-top: 1px solid var(--line)
+        }
+
+        h2 {
+            font-size: 1.4rem;
+            margin: 0 0 18px;
+            color: var(--ink)
+        }
+
+        .lead {
+            font-size: 1.05rem;
+            color: var(--muted);
+            max-width: 720px
+        }
+
+        .project {
+            background: var(--surface);
+            border: 1px solid var(--line);
+            border-radius: var(--radius);
+            padding: 24px;
+            margin-bottom: 24px;
+        }
+
+        .project h3 {
+            margin: 0 0 4px;
+            font-size: 1.25rem
+        }
+
+        .project .sub {
+            margin: 0 0 14px;
+            color: var(--muted);
+            font-size: .95rem
+        }
+
+        .project p.desc {
+            margin: 0 0 18px
+        }
+
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin: 0 0 18px
+        }
+
+        .tag {
+            background: #eef1f4;
+            color: var(--accent);
+            font-size: .8rem;
+            padding: 4px 10px;
+            border-radius: 999px;
+            font-weight: 600;
+        }
+
+        .shots {
+            display: grid;
+            grid-template-columns:repeat(auto-fit, minmax(240px, 1fr));
+            gap: 12px
+        }
+
+        .shots a {
+            display: block;
+            border: 1px solid var(--line);
+            border-radius: 10px;
+            overflow: hidden;
+            background: #fff
+        }
+
+        .shots img {
+            display: block;
+            width: 100%;
+            height: auto
+        }
+
+        .skills {
+            display: grid;
+            grid-template-columns:repeat(auto-fit, minmax(240px, 1fr));
+            gap: 16px
+        }
+
+        .skillcard {
+            background: var(--surface);
+            border: 1px solid var(--line);
+            border-radius: var(--radius);
+            padding: 18px 20px
+        }
+
+        .skillcard h4 {
+            margin: 0 0 8px;
+            font-size: 1rem;
+            color: var(--accent)
+        }
+
+        .skillcard p {
+            margin: 0;
+            color: var(--muted);
+            font-size: .95rem
+        }
+
+        /* CTA */
+        .cta a {
+            display: inline-block;
+            background: var(--accent);
+            color: #fff;
+            padding: 12px 22px;
+            border-radius: 999px;
+            font-weight: 600;
+        }
+
+        .cta a:hover {
+            text-decoration: none;
+            opacity: .92
+        }
+
+        footer {
+            padding: 36px 0;
+            border-top: 1px solid var(--line);
+            color: var(--muted);
+            font-size: .9rem
+        }
+
+        footer a {
+            margin-right: 16px
+        }
+
+        @media (max-width: 600px) {
+            header {
+                padding: 40px 0 34px
+            }
+
+            header h1 {
+                font-size: 1.6rem
+            }
+
+            section {
+                padding: 34px 0
+            }
+        }
+    </style>
 </head>
 <body>
 
 <header>
-  <div class="wrap">
-    <h1>Maksim Levchenko</h1>
-    <p class="role">Senior Backend Developer (PHP / Laravel)</p>
-    <div class="meta">Ukraine · Remote · <a href="mailto:maxcena2015@gmail.com" style="color:#fff;text-decoration:underline">maxcena2015@gmail.com</a></div>
-    <div class="links">
-      <a href="https://www.linkedin.com/in/maxym-levchenko" target="_blank" rel="noopener">LinkedIn</a>
-      <a href="https://www.upwork.com/freelancers/~01a93d583f2bf5cb34" target="_blank" rel="noopener">Upwork</a>
-      <a href="mailto:maxcena2015@gmail.com">Email</a>
+    <div class="wrap">
+        <h1>Maksim Levchenko</h1>
+        <p class="role">Senior Backend Developer (PHP / Laravel)</p>
+        <div class="meta">Ukraine · Remote · <a href="mailto:maxcena2015@gmail.com"
+                                                style="color:#fff;text-decoration:underline">maxcena2015@gmail.com</a>
+        </div>
+        <div class="links">
+            <a href="https://www.linkedin.com/in/maxym-levchenko" target="_blank" rel="noopener">LinkedIn</a>
+            <a href="https://www.upwork.com/freelancers/~01a93d583f2bf5cb34" target="_blank" rel="noopener">Upwork</a>
+            <a href="mailto:maxcena2015@gmail.com">Email</a>
+        </div>
     </div>
-  </div>
 </header>
 
 <section id="about">
-  <div class="wrap">
-    <h2>About</h2>
-    <p class="lead">
-      Senior backend developer with ~6 years of commercial experience, mostly with PHP and Laravel,
-      and solid full stack experience with Vue.js and React. I have owned the backend of live production
-      systems, designed APIs and architecture, and reviewed code.
-    </p>
-    <p class="lead" style="margin-top:14px">
-      I have worked on large-scale platforms with large volumes of data and many active users, where I
-      regularly optimized slow queries and endpoints, in some cases making them up to 10x faster. I also
-      build AI-powered features into real products in a way that keeps code reliable and maintainable.
-    </p>
-  </div>
+    <div class="wrap">
+        <h2>About</h2>
+        <p class="lead">
+            Senior backend developer with ~6 years of commercial experience, mostly with PHP and Laravel,
+            and solid full stack experience with Vue.js and React. I have owned the backend of live production
+            systems, designed APIs and architecture, and reviewed code.
+        </p>
+        <p class="lead" style="margin-top:14px">
+            I have worked on large-scale platforms with large volumes of data and many active users, where I
+            regularly optimized slow queries and endpoints, in some cases making them up to 15x faster. I also
+            build AI-powered features into real products in a way that keeps code reliable and maintainable.
+        </p>
+    </div>
 </section>
 
 <section id="projects">
-  <div class="wrap">
-    <h2>Selected projects</h2>
+    <div class="wrap">
+        <h2>Selected projects</h2>
 
-    <!-- Revoic -->
-    <div class="project">
-      <h3>Revoic AI — AI-powered Amazon listing generator</h3>
-      <p class="sub">Full Stack Developer · Laravel, Vue (VILT), OpenAI API, Redis</p>
-      <p class="desc">
-        A SaaS platform for generating Amazon product listings in bulk using AI. Users add products
-        one by one through a form or upload an Excel file to generate many at once. The system generates
-        titles and bullet points via the OpenAI API within Amazon's field limits, and users can create
-        their own prompts, then review, edit and transfer listings to Amazon per marketplace.
-        Built on the VILT stack (Vue, Inertia, Laravel, Tailwind). AI generation was offloaded to queues
-        with Redis and processed by workers, so large batches run in the background.
-      </p>
-      <div class="tags">
-        <span class="tag">Laravel</span><span class="tag">Vue.js</span><span class="tag">OpenAI API</span>
-        <span class="tag">Redis</span><span class="tag">MySQL</span>
-      </div>
-      <div class="shots">
-        <a href="revoic-1.png" target="_blank"><img src="revoic-1.png" alt="Revoic AI — jobs" loading="lazy"></a>
-        <a href="revoic-2.png" target="_blank"><img src="revoic-2.png" alt="Revoic AI — listing" loading="lazy"></a>
-        <a href="revoic-3.png" target="_blank"><img src="revoic-3.png" alt="Revoic AI — prompts" loading="lazy"></a>
-        <a href="revoic-4.png" target="_blank"><img src="revoic-4.png" alt="Revoic AI — transfer" loading="lazy"></a>
-      </div>
+        <!-- Guardey -->
+        <div class="project">
+            <h3>Guardey - gamified cybersecurity platform</h3>
+            <p class="sub">Developer · Laravel, MySQL, microservices, query optimization</p>
+            <p class="desc">
+                A B2B cybersecurity platform: gamified security awareness training with challenges, seasons,
+                achievements, leaderboards and statistics, plus phishing simulations and VPN threat monitoring.
+                I worked on the backend: game logic (challenges, scoring, achievements), leaderboards and
+                statistics over large volumes of user data. I optimized slow database queries and endpoints,
+                in one case making a key leaderboard page around 15x faster.
+            </p>
+            <div class="tags">
+                <span class="tag">Laravel</span><span class="tag">MySQL</span><span
+                    class="tag">Query optimization</span>
+                <span class="tag">Microservices</span><span class="tag">GraphQL</span>
+            </div>
+            <div class="shots">
+                <a href="assets/img/guardey/academy-home.png" target="_blank"><img src="assets/img/guardey/academy-home.png" alt="Guardey - Home"
+                                                                                   loading="lazy"></a>
+                <a href="assets/img/guardey/academy-leaderboard.png" target="_blank"><img src="assets/img/guardey/academy-leaderboard.png" alt="Guardey - Leaderboard"
+                                                                                          loading="lazy"></a>
+                <a href="assets/img/guardey/portal-organization-game-insights.png" target="_blank"><img src="assets/img/guardey/portal-organization-game-insights.png" alt="Guardey - statistics"
+                                                                                                        loading="lazy"></a>
+                <a href="assets/img/guardey/academy-challenge.png" target="_blank"><img src="assets/img/guardey/academy-challenge.png" alt="Guardey - challenges"
+                                                                                        loading="lazy"></a>
+                <a href="assets/img/guardey/portal-user-vpn-alerts.png" target="_blank"><img src="assets/img/guardey/portal-user-vpn-alerts.png" alt="Guardey - admin"
+                                                                                             loading="lazy"></a>
+            </div>
+        </div>
+
+        <!-- Revoic -->
+        <div class="project">
+            <h3>Revoic AI - AI-powered Amazon listing generator</h3>
+            <p class="sub">Full Stack Developer · Laravel, Vue (VILT), OpenAI API, Redis</p>
+            <p class="desc">
+                A SaaS platform for generating Amazon product listings in bulk using AI. Users add products
+                one by one through a form or upload an Excel file to generate many at once. The system generates
+                fields via the OpenAI API within Amazon's field limits, and users can create
+                their own prompts, then review, edit and transfer listings to Amazon per marketplace.
+                Built on the VILT stack (Vue, Inertia, Laravel, Tailwind). AI generation was offloaded to queues
+                with Redis and processed by workers, so large batches run in the background.
+            </p>
+            <div class="tags">
+                <span class="tag">Laravel</span><span class="tag">Vue.js</span><span class="tag">OpenAI API</span>
+                <span class="tag">Redis</span><span class="tag">MySQL</span>
+            </div>
+            <div class="shots">
+                <a href="assets/img/revoic-ai/1.png" target="_blank"><img src="assets/img/revoic-ai/1.png" alt="Revoic AI - jobs" loading="lazy"></a>
+                <a href="assets/img/revoic-ai/2.png" target="_blank"><img src="assets/img/revoic-ai/2.png" alt="Revoic AI - listings" loading="lazy"></a>
+                <a href="assets/img/revoic-ai/3.png" target="_blank"><img src="assets/img/revoic-ai/3.png" alt="Revoic AI - transfer" loading="lazy"></a>
+                <a href="assets/img/revoic-ai/4.png" target="_blank"><img src="assets/img/revoic-ai/4.png" alt="Revoic AI - listing" loading="lazy"></a>
+                <a href="assets/img/revoic-ai/5.png" target="_blank"><img src="assets/img/revoic-ai/5.png" alt="Revoic AI - prompt" loading="lazy"></a>
+            </div>
+        </div>
+
+        <!-- AgriOil -->
+        <div class="project">
+            <h3>AgriOil - commodity trading CRM / ERP platform</h3>
+            <p class="sub">Full Stack Developer · Laravel, MySQL, OpenAI API, Exact integration</p>
+            <p class="desc">
+                A CRM/ERP platform for an agricultural commodity broker (vegetable oils, biofuels). It covers the
+                full workflow: managing counterparties, creating contracts from templates with e-signing, tracking
+                execution, generating invoices, reporting and an analytics dashboard. On the backend I worked on
+                contract and invoicing logic, execution tracking, and integration with Exact (accounting) for
+                syncing invoices. I also added smaller features like AI-generated status-request emails via the
+                OpenAI API, and traced and fixed a long-standing bug that was silently failing ~15% of monthly
+                invoicing.
+            </p>
+            <div class="tags">
+                <span class="tag">Laravel</span><span class="tag">MySQL</span><span class="tag">OpenAI API</span>
+                <span class="tag">Exact integration</span><span class="tag">CRM / ERP</span>
+            </div>
+            <div class="shots">
+                <a href="assets/img/agrioil/01-dashboard-light.png" target="_blank"><img src="assets/img/agrioil/01-dashboard-light.png" alt="AgriOil - dashboard"
+                                                             loading="lazy"></a>
+                <a href="assets/img/agrioil/04-contract-edit-light.png" target="_blank"><img src="assets/img/agrioil/04-contract-edit-light.png" alt="AgriOil - contract form"
+                                                             loading="lazy"></a>
+                <a href="assets/img/agrioil/09-invoices-light.png" target="_blank"><img src="assets/img/agrioil/09-invoices-light.png" alt="AgriOil - invoices"
+                                                             loading="lazy"></a>
+                <a href="assets/img/agrioil/10-invoice-light.png" target="_blank"><img src="assets/img/agrioil/10-invoice-light.png" alt="AgriOil - invoice" loading="lazy"></a>
+                <a href="assets/img/agrioil/11-commodity-payments-light.png" target="_blank"><img src="assets/img/agrioil/11-commodity-payments-light.png" alt="AgriOil - report" loading="lazy"></a>
+            </div>
+        </div>
+
+        <!-- Horse Passport -->
+        <div class="project">
+            <h3>Horse Passport Agency - equine passport issuing &amp; management</h3>
+            <p class="sub">Developer · PHP (no framework), MariaDB, PDF generation, payments</p>
+            <p class="desc">
+                A UK platform for issuing and managing equine passports: a public site, an owner portal, a vet
+                portal with an interactive silhouette tool for marking a horse's features, and a large admin back
+                office with a lot of logic and many modules. I was one of the developers (PHP, MariaDB), working
+                on a wide range of features across the system over time, as it is actively developed. Examples:
+                the flow where a drawn silhouette is cut by coordinates and placed into the generated PDF passport,
+                payment integration, application status management, and passport reissuing (which invalidates the
+                previous QR code). Handles 100+ applications a day and 100+ GB of documents.
+            </p>
+            <div class="tags">
+                <span class="tag">PHP</span><span class="tag">MariaDB</span><span class="tag">PDF generation</span>
+                <span class="tag">Payment integration</span><span class="tag">JavaScript</span>
+            </div>
+            <div class="shots">
+                <a href="assets/img/horsepassportagency/1.png" target="_blank"><img src="assets/img/horsepassportagency/1.png" alt="Horse Passport - home"
+                                                                   loading="lazy"></a>
+                <a href="assets/img/horsepassportagency/3.png" target="_blank"><img src="assets/img/horsepassportagency/3.png"
+                                                                   alt="Horse Passport - silhouette tool"
+                                                                   loading="lazy"></a>
+                <a href="assets/img/horsepassportagency/4.png" target="_blank"><img src="assets/img/horsepassportagency/4.png"
+                                                                   alt="Horse Passport - pay now" loading="lazy"></a>
+                <a href="assets/img/horsepassportagency/2.png" target="_blank"><img src="assets/img/horsepassportagency/2.png"
+                                                                   alt="Horse Passport - PDF passport"
+                                                                   loading="lazy"></a>
+            </div>
+        </div>
+
     </div>
-
-    <!-- AgriOil -->
-    <div class="project">
-      <h3>AgriOil — commodity trading CRM / ERP platform</h3>
-      <p class="sub">Full Stack Developer · Laravel, MySQL, OpenAI API, Exact integration</p>
-      <p class="desc">
-        A CRM/ERP platform for an agricultural commodity broker (vegetable oils, biofuels). It covers the
-        full workflow: managing counterparties, creating contracts from templates with e-signing, tracking
-        execution, generating invoices, reporting and an analytics dashboard. On the backend I worked on
-        contract and invoicing logic, execution tracking, and integration with Exact (accounting) for
-        syncing invoices. I also added smaller features like AI-generated status-request emails via the
-        OpenAI API, and traced and fixed a long-standing bug that was silently failing ~15% of monthly
-        invoicing.
-      </p>
-      <div class="tags">
-        <span class="tag">Laravel</span><span class="tag">MySQL</span><span class="tag">OpenAI API</span>
-        <span class="tag">Exact integration</span><span class="tag">CRM / ERP</span>
-      </div>
-      <div class="shots">
-        <a href="agrioil-1.png" target="_blank"><img src="agrioil-1.png" alt="AgriOil — dashboard" loading="lazy"></a>
-        <a href="agrioil-2.png" target="_blank"><img src="agrioil-2.png" alt="AgriOil — contract form" loading="lazy"></a>
-        <a href="agrioil-3.png" target="_blank"><img src="agrioil-3.png" alt="AgriOil — invoices" loading="lazy"></a>
-        <a href="agrioil-4.png" target="_blank"><img src="agrioil-4.png" alt="AgriOil — invoice" loading="lazy"></a>
-        <a href="agrioil-5.png" target="_blank"><img src="agrioil-5.png" alt="AgriOil — report" loading="lazy"></a>
-      </div>
-    </div>
-
-    <!-- Guardey -->
-    <div class="project">
-      <h3>Guardey — gamified cybersecurity platform</h3>
-      <p class="sub">Developer · Laravel, MySQL, microservices, query optimization</p>
-      <p class="desc">
-        A B2B cybersecurity platform: gamified security awareness training with challenges, seasons,
-        achievements, leaderboards and statistics, plus phishing simulations and VPN threat monitoring.
-        I worked on the backend: game logic (challenges, scoring, achievements), leaderboards and
-        statistics over large volumes of user data. I optimized slow database queries and endpoints,
-        in one case making a key leaderboard page around 10x faster. The system was split into separate
-        services by domain (Laravel for the game side, a separate service for users and organizations).
-      </p>
-      <div class="tags">
-        <span class="tag">Laravel</span><span class="tag">MySQL</span><span class="tag">Query optimization</span>
-        <span class="tag">Microservices</span><span class="tag">GraphQL</span>
-      </div>
-      <div class="shots">
-        <a href="guardey-1.png" target="_blank"><img src="guardey-1.png" alt="Guardey — leaderboard" loading="lazy"></a>
-        <a href="guardey-2.png" target="_blank"><img src="guardey-2.png" alt="Guardey — statistics" loading="lazy"></a>
-        <a href="guardey-3.png" target="_blank"><img src="guardey-3.png" alt="Guardey — challenges" loading="lazy"></a>
-        <a href="guardey-4.png" target="_blank"><img src="guardey-4.png" alt="Guardey — admin" loading="lazy"></a>
-      </div>
-    </div>
-
-    <!-- Horse Passport -->
-    <div class="project">
-      <h3>Horse Passport Agency — equine passport issuing &amp; management</h3>
-      <p class="sub">Developer · PHP (no framework), MariaDB, PDF generation, payments</p>
-      <p class="desc">
-        A UK platform for issuing and managing equine passports: a public site, an owner portal, a vet
-        portal with an interactive silhouette tool for marking a horse's features, and a large admin back
-        office with a lot of logic and many modules. I was one of the developers (PHP, MariaDB), working
-        on a wide range of features across the system over time, as it is actively developed. Examples:
-        the flow where a drawn silhouette is cut by coordinates and placed into the generated PDF passport,
-        payment integration, application status management, and passport reissuing (which invalidates the
-        previous QR code). Handles 100+ applications a day and 100+ GB of documents.
-      </p>
-      <div class="tags">
-        <span class="tag">PHP</span><span class="tag">MariaDB</span><span class="tag">PDF generation</span>
-        <span class="tag">Payment integration</span><span class="tag">JavaScript</span>
-      </div>
-      <div class="shots">
-        <a href="horsepassport-1.png" target="_blank"><img src="horsepassport-1.png" alt="Horse Passport — home" loading="lazy"></a>
-        <a href="horsepassport-2.png" target="_blank"><img src="horsepassport-2.png" alt="Horse Passport — silhouette tool" loading="lazy"></a>
-        <a href="horsepassport-3.png" target="_blank"><img src="horsepassport-3.png" alt="Horse Passport — pay now" loading="lazy"></a>
-        <a href="horsepassport-4.png" target="_blank"><img src="horsepassport-4.png" alt="Horse Passport — PDF passport" loading="lazy"></a>
-      </div>
-    </div>
-
-  </div>
 </section>
 
 <section id="skills">
-  <div class="wrap">
-    <h2>Skills</h2>
-    <div class="skills">
-      <div class="skillcard">
-        <h4>Backend</h4>
-        <p>PHP, Laravel, Livewire, Python, Django, REST API, GraphQL, queues &amp; jobs, OOP, SOLID</p>
-      </div>
-      <div class="skillcard">
-        <h4>Databases</h4>
-        <p>MySQL, PostgreSQL, PostGIS, MariaDB, Redis</p>
-      </div>
-      <div class="skillcard">
-        <h4>Frontend</h4>
-        <p>Vue.js, React, Next.js, Inertia, JavaScript, HTML, CSS</p>
-      </div>
-      <div class="skillcard">
-        <h4>Tools &amp; infra</h4>
-        <p>Git, Docker, Linux, AWS, PHPUnit</p>
-      </div>
+    <div class="wrap">
+        <h2>Skills</h2>
+        <div class="skills">
+            <div class="skillcard">
+                <h4>Backend</h4>
+                <p>PHP, Laravel, Livewire, Python, Django, REST API, GraphQL, queues &amp; jobs, OOP, SOLID</p>
+            </div>
+            <div class="skillcard">
+                <h4>Databases</h4>
+                <p>MySQL, PostgreSQL, PostGIS, MariaDB, Redis</p>
+            </div>
+            <div class="skillcard">
+                <h4>Frontend</h4>
+                <p>Vue.js, React, Next.js, Inertia, JavaScript, HTML, CSS</p>
+            </div>
+            <div class="skillcard">
+                <h4>Tools &amp; infra</h4>
+                <p>Git, Docker, Linux, AWS, PHPUnit</p>
+            </div>
+        </div>
     </div>
-  </div>
 </section>
 
 <section id="cv" class="cta">
-  <div class="wrap">
-    <h2>Resume</h2>
-    <p class="lead" style="margin-bottom:18px">Full CV with work history and education.</p>
-    <a href="Maksim_Levchenko_CV.pdf" target="_blank" rel="noopener">Download CV (PDF)</a>
-  </div>
+    <div class="wrap">
+        <h2>Resume</h2>
+        <p class="lead" style="margin-bottom:18px">Full CV with work history and education.</p>
+        <a href="Maksim_Levchenko_CV.pdf" target="_blank" rel="noopener">Download CV (PDF)</a>
+    </div>
 </section>
 
 <footer>
-  <div class="wrap">
-    <a href="https://www.linkedin.com/in/maxym-levchenko" target="_blank" rel="noopener">LinkedIn</a>
-    <a href="https://www.upwork.com/freelancers/~01a93d583f2bf5cb34" target="_blank" rel="noopener">Upwork</a>
-    <a href="mailto:maxcena2015@gmail.com">maxcena2015@gmail.com</a>
-    <div style="margin-top:10px">© Maksim Levchenko</div>
-  </div>
+    <div class="wrap">
+        <a href="https://www.linkedin.com/in/maxym-levchenko" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://www.upwork.com/freelancers/~01a93d583f2bf5cb34" target="_blank" rel="noopener">Upwork</a>
+        <a href="mailto:maxcena2015@gmail.com">maxcena2015@gmail.com</a>
+        <div style="margin-top:10px">© Maksim Levchenko</div>
+    </div>
 </footer>
 
 </body>
